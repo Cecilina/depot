@@ -7,7 +7,7 @@
 
 <p>
   <b>Description:</b>
-  <%= @product.description %>
+  <%= truncate(strip_tags(@product.description),length: @product.description.length) %>
 </p>
 
 <p>
@@ -17,7 +17,7 @@
 
 <p>
   <b>Price:</b>
-  <%= @product.price %>
+  <%= number_to_currency(@product.price) %>
 </p>
 
 
