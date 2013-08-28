@@ -9,16 +9,17 @@
 require 'bundler/capistrano'
 # be sure to change these
 set :user, 'cecilina'
-set :domain, 'gmail'
+set :domain, 'depot.cecilinahost.com'
 set :application, 'depot'
 
 # adjust if you are using RVM, remove if you are not
-require "rvm/capistrano"
+
 set :rvm_ruby_string, '1.9.3'
 set :rvm_type, :user
+require "rvm/capistrano"
 
 # file paths
-set :repository,  "#{user}@#{domain}:git/#{application}.git" 
+set :repository,  "git@github.com:Cecilina/#{application}.git" 
 set :deploy_to, "/home/#{user}/#{domain}" 
 
 # distribute your applications across servers (the instructions below put them
